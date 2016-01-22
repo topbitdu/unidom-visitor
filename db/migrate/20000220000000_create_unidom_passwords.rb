@@ -4,8 +4,8 @@ class CreateUnidomPasswords < ActiveRecord::Migration
 
     create_table :unidom_passwords, id: :uuid do |t|
 
-      t.column :hashed_content, 'char(64)', null: false
-      t.column :pepper_content, 'char(64)', null: false
+      t.column :hashed_content, 'char(128)', null: false
+      t.column :pepper_content, 'char(128)', null: false
 
       t.column   :state, 'char(1)', null: false, default: 'C'
       t.datetime :opened_at,        null: false, default: ::Time.utc(1970)

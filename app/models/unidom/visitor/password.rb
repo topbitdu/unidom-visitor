@@ -22,7 +22,7 @@ class Unidom::Visitor::Password < ActiveRecord::Base
   end
 
   def hash(clear_text)
-    Digest::SHA256.hexdigest "#{::Rails.application.secrets[:secret_key_base]}#{clear_text}#{self.pepper_content}"
+    Digest::SHA512.hexdigest "#{::Rails.application.secrets[:secret_key_base]}#{clear_text}#{self.pepper_content}"
   end
 
   def change_to(new_password)

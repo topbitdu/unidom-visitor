@@ -4,7 +4,7 @@ class CreateUnidomAuthenticatings < ActiveRecord::Migration
 
     create_table :unidom_authenticatings, id: :uuid do |t|
 
-      t.references :visitor,  type: :uuid, null: false,
+      t.references :visitor,    type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
       t.references :credential, type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }

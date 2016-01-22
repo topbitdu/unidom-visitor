@@ -11,13 +11,14 @@ Gem::Specification.new do |spec|
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-visitor'
   spec.summary     = 'The Visitor domain model engine includes User, Guest, Administrator, and Password models.'
-  spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Visitor domain model engine includes User, Guest, Administrator, and Password models.
-Unidom (统一领域对象模型)是一系列的领域模型引擎。访问者领域模型引擎包括用户、游客、管理员和密码的模型。'
+  spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Visitor domain model engine includes User, Guest, Administrator, and Password models. Unidom (统一领域对象模型)是一系列的领域模型引擎。访问者领域模型引擎包括用户、游客、管理员和密码的模型。'
   spec.license     = 'MIT'
 
-  spec.files = Dir[ '{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc' ]
+  spec.files         = Dir[ '{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md' ]
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = [ 'lib' ]
 
-  spec.add_dependency 'rails', '~> 4.2.5'
-  spec.add_dependency 'pg',    '~> 0'
+  spec.add_dependency 'unidom-common', '~> 0.2'
 
 end
