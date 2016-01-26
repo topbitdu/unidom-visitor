@@ -1,8 +1,8 @@
-class CreateUnidomReceptions < ActiveRecord::Migration
+class CreateUnidomRecognizations < ActiveRecord::Migration
 
   def change
 
-    create_table :unidom_receptions, id: :uuid do |t|
+    create_table :unidom_recognizations, id: :uuid do |t|
 
       t.references :visitor, type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
@@ -21,8 +21,8 @@ class CreateUnidomReceptions < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_receptions, :visitor_id
-    add_index :unidom_receptions, :party_id
+    add_index :unidom_recognizations, :visitor_id
+    add_index :unidom_recognizations, :party_id
 
   end
 

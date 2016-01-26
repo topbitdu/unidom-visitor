@@ -9,9 +9,11 @@ class Unidom::Visitor::User < ActiveRecord::Base
   has_many :authenticatings, class_name: 'Unidom::Visitor::Authenticating', as: :visitor
   has_many :passwords,       through:    :authenticatings, source: :credential, source_type: 'Unidom::Visitor::Password'
 
-  has_many :receptions, class_name: 'Unidom::Visitor::Reception', as: :visitor
+  has_many :recognizations,  class_name: 'Unidom::Visitor::Recognization',  as: :visitor
 
   scope :identified_by, ->(identity) { joins(:identificatings).merge(::Unidom::Visitor::Identificating.identity_is identity) }
+
+  include ::Unidom::Common::Concerns::ModelExtension
 
   def self.sign_up(identity, password)
 

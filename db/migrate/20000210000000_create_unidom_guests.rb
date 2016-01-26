@@ -17,7 +17,7 @@ class CreateUnidomGuests < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_guests, [ :platform_specific_identification, :platform_code ], unique: true, name: :index_guests_on_identification
+    add_index :unidom_guests, [ :platform_specific_identification, :platform_code ], unique: true, name: :index_guests_on_platform_identification
 
   end
 
