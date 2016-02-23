@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-visitor'
-  spec.summary     = 'The Visitor domain model engine includes User, Guest, Administrator, and Password models.'
+  spec.summary     = 'Unidom Visitor Domain Model Engine 访问者领域模型引擎'
   spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Visitor domain model engine includes User, Guest, Administrator, and Password models. Unidom (统一领域对象模型)是一系列的领域模型引擎。访问者领域模型引擎包括用户、游客、管理员和密码的模型。'
   spec.license     = 'MIT'
 
