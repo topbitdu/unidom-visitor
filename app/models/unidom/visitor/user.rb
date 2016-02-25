@@ -13,7 +13,7 @@ class Unidom::Visitor::User < ActiveRecord::Base
 
   scope :identified_by, ->(identity) { joins(:identificatings).merge(::Unidom::Visitor::Identificating.identity_is identity) }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
   def self.sign_up(identity, password)
 
