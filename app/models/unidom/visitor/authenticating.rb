@@ -12,7 +12,7 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
   scope :visitor_is,    ->(visitor)    { where visitor:    visitor    }
   scope :credential_is, ->(credential) { where credential: credential }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
   def self.authenticate(visitor, credential)
     self.create! visitor: visitor, credential: credential, opened_at: Time.now
