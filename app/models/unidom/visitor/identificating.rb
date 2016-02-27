@@ -10,7 +10,7 @@ class Unidom::Visitor::Identificating < ActiveRecord::Base
   scope :identity_is, ->(identity) { where identity: identity }
   scope :visitor_is,  ->(visitor)  { where visitor:  visitor  }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
   def self.find_identity(visitor)
     visitor_is(visitor).first.try :identity

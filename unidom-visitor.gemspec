@@ -6,7 +6,7 @@ require 'unidom/visitor/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = 'unidom-visitor'
-  spec.version     = ::Unidom::Visitor::VERSION
+  spec.version     = Unidom::Visitor::VERSION
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-visitor'
