@@ -8,6 +8,6 @@ class Unidom::Visitor::Guest < ActiveRecord::Base
 
   scope :platform_specific_identification_is, ->(platform_specific_identification) { where platform_specific_identification: platform_specific_identification }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
 end
