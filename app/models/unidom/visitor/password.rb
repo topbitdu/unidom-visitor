@@ -6,7 +6,7 @@ class Unidom::Visitor::Password < ActiveRecord::Base
 
   has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
   def generate_pepper_content
     self.pepper_content = self.pepper_content||::SecureRandom.hex(self.class.columns_hash['pepper_content'].limit/2)
