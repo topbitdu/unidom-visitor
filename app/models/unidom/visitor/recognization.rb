@@ -10,7 +10,7 @@ class Unidom::Visitor::Recognization < ActiveRecord::Base
   scope :visitor_is,  ->(visitor) { where visitor: visitor }
   scope :party_is,    ->(party)   { where party:   party   }
 
-  include ::Unidom::Common::Concerns::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
   def self.cognize(visitor, party)
     raise 'Visitor can not be null.' if visitor.blank?
