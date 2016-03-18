@@ -8,5 +8,6 @@
 5. User model & migration
 6. Password model & migration
 
-## v0.2
-1. Improved the Ruby Gem Specification to depend on unidom-common v0.4.
+## v0.1.1
+1. Improved the Ruby Gem Specification to depend on unidom-common v0.5
+2. Improved the Recognization model for table name

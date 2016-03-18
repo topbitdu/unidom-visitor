@@ -2,7 +2,7 @@
 
 class Unidom::Visitor::Recognization < ActiveRecord::Base
 
-  self.table = 'unidom_recognizations'
+  self.table_name = 'unidom_recognizations'
 
   belongs_to :visitor, polymorphic: true
   belongs_to :party,   polymorphic: true
