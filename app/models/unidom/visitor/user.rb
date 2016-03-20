@@ -17,7 +17,7 @@ class Unidom::Visitor::User < ActiveRecord::Base
 
   def self.sign_up(identity, password)
 
-    return false if identified_by(identity).valid_at.alive.merge(::Identificating.valid_at.alive).count>0
+    return false if identified_by(identity).valid_at.alive.merge(::Unidom::Visitor::Identificating.valid_at.alive).count>0
 
     now        = Time.now
     user       = self.create! opened_at: now
