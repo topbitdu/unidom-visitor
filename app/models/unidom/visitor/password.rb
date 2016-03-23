@@ -32,9 +32,10 @@ class Unidom::Visitor::Password < ActiveRecord::Base
   def change_to(new_password)
     visitor = authenticating.visitor
     soft_destroy
-    password = Password.new clear_text: new_password
+    authenticating.soft_destroy
+    password = self.class.new clear_text: new_password, opened_at: Time.now
     if password.save
-      Authenticating.authenticate user, password
+      Unidom::Visitor::Authenticating.authenticate visitor, password
     else
       nil
     end

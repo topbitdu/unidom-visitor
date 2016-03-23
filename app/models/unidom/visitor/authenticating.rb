@@ -12,6 +12,9 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
   scope :visitor_is,    ->(visitor)    { where visitor:    visitor    }
   scope :credential_is, ->(credential) { where credential: credential }
 
+  scope :visitor_type_is,    ->(visitor_type)    { where visitor_type:    visitor_type    }
+  scope :credential_type_is, ->(credential_type) { where credential_type: credential_type }
+
   include Unidom::Common::Concerns::ModelExtension
 
   def self.authenticate(visitor, credential)
