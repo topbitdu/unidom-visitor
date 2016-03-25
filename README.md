@@ -18,7 +18,14 @@ rake db:migrate
 
 ## Call the Model
 ```ruby
-Unidom::Visitor::User.sign_up mobile_phone_number_entity, 'password'
+phone = PhoneNumberIdentity.create phone_number: '13912345678'
+Unidom::Visitor::User.sign_up phone, 'password', now: Time.now
+# Sign up a user with given phone number and password
+
 Unidom::Visitor::Guest.valid_at.alive.first
-Unidom::Visitor::User.valid_at.alive.first.passwords.valid_at.alive.first.merge(Unidom::Visitor::Authenticating.valid_at.alive).first
+# Get the first guest
+
+if Unidom::Visitor::User.valid_at.alive.first.passwords.valid_at.alive.first.merge(Unidom::Visitor::Authenticating.valid_at.alive).first.matched? 'password'
+  # Sign in
+end
 ```

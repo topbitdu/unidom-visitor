@@ -15,11 +15,10 @@ class Unidom::Visitor::User < ActiveRecord::Base
 
   include Unidom::Common::Concerns::ModelExtension
 
-  def self.sign_up(identity, password)
+  def self.sign_up(identity, password, now: Time.now)
 
     return false if identified_by(identity).valid_at.alive.merge(::Unidom::Visitor::Identificating.valid_at.alive).count>0
 
-    now        = Time.now
     user       = self.create! opened_at: now
     credential = ::Unidom::Visitor::Password.create! clear_text: password, opened_at: now
 
