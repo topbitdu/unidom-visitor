@@ -17,8 +17,8 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
 
   include Unidom::Common::Concerns::ModelExtension
 
-  def self.authenticate(visitor, credential)
-    self.create! visitor: visitor, credential: credential, opened_at: Time.now
+  def self.authenticate(visitor, credential, opened_at: Time.now)
+    self.create! visitor: visitor, credential: credential, opened_at: opened_at
   end
 
 end

@@ -21,4 +21,9 @@
 
 ## v0.3
 1. Improved the Recognization model to support the keyword arguments in the ::cognize method
-2. Improved the User model to support the keyword arguments in the the ::sign_up method
+2. Improved the User model to support the keyword arguments in the ::sign_up method
+
+## v0.4
+1. Improved the User model to change the keyword arguments in the ::sign_up method
+2. Improved the Authenticating model to support the keyword arguments in the #authenticate method
+3. Improved the Identificating model to support the keyword arguments in the #identificate method

@@ -16,8 +16,8 @@ class Unidom::Visitor::Identificating < ActiveRecord::Base
     visitor_is(visitor).first.try :identity
   end
 
-  def self.identificate(visitor, identity)
-    self.visitor_is(visitor).identity_is(identity).valid_at.alive.first_or_create opened_at: Time.now
+  def self.identificate(visitor, identity, opened_at: Time.now)
+    self.visitor_is(visitor).identity_is(identity).valid_at.alive.first_or_create opened_at: opened_at
   end
 
 end
