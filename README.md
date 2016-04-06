@@ -23,9 +23,13 @@ The migration versions start with 200002.
 
 ## Call the Model
 ```ruby
-phone = PhoneNumberIdentity.create phone_number: '13912345678'
-Unidom::Visitor::User.sign_up phone, 'password', opened_at: Time.now
+phone_1 = PhoneNumberIdentity.create phone_number: '13912345678'
+Unidom::Visitor::User.sign_up phone_1, password: 'password', opened_at: Time.now
 # Sign up a user with given phone number and password
+
+phone_2 = PhoneNumberIdentity.create phone_number: '13912345679'
+Unidom::Visitor::User.sign_up phone_2, opened_at: Time.now
+# Sign up a user with the given phone number & password not set
 
 Unidom::Visitor::Guest.valid_at.alive.first
 # Get the first guest

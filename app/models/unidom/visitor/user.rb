@@ -11,19 +11,23 @@ class Unidom::Visitor::User < ActiveRecord::Base
 
   has_many :recognizations,  class_name: 'Unidom::Visitor::Recognization',  as: :visitor
 
-  scope :identified_by, ->(identity) { joins(:identificatings).merge(::Unidom::Visitor::Identificating.identity_is identity) }
+  scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }
 
   include Unidom::Common::Concerns::ModelExtension
 
-  def self.sign_up(identity, password, opened_at: Time.now)
+  def self.sign_up(identity, password: nil, opened_at: Time.now)
 
-    return false if identified_by(identity).valid_at.alive.merge(::Unidom::Visitor::Identificating.valid_at.alive).count>0
+    Rails.logger.debug "Signing up user with identity: #{identity.inspect}."
+    return false if identified_by(identity).valid_at.alive.merge(Unidom::Visitor::Identificating.valid_at.alive).count>0
 
-    user       = self.create! opened_at: opened_at
-    credential = ::Unidom::Visitor::Password.create! clear_text: password, opened_at: opened_at
+    user           = self.create! opened_at: opened_at
+    identificating = Unidom::Visitor::Identificating.identificate user, identity
 
-    identificating = ::Unidom::Visitor::Identificating.identificate user, identity
-    authenticating = ::Unidom::Visitor::Authenticating.authenticate user, credential
+    Rails.logger.debug "Authenticate user #{user.id} with password: #{password.inspect}."
+    if password.present?
+      credential     = Unidom::Visitor::Password.create! clear_text: password, opened_at: opened_at
+      authenticating = Unidom::Visitor::Authenticating.authenticate user, credential
+    end
 
     user
 
