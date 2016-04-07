@@ -4,19 +4,22 @@ class Unidom::Visitor::Password < ActiveRecord::Base
 
   self.table_name = 'unidom_passwords'
 
-  has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential
-
   include Unidom::Common::Concerns::ModelExtension
+
+  validates :clear_text, presence: true, length: { in: 6..200 }
+
+  has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential
 
   def generate_pepper_content
     self.pepper_content = self.pepper_content||::SecureRandom.hex(self.class.columns_hash['pepper_content'].limit/2)
   end
 
   def clear_text
-    ''
+    @clear_text
   end
 
   def clear_text=(password)
+    @clear_text = password
     generate_pepper_content
     self.hashed_content = hash password
   end

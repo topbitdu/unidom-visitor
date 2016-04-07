@@ -20,7 +20,7 @@ class Unidom::Visitor::User < ActiveRecord::Base
     Rails.logger.debug "Signing up user with identity: #{identity.inspect}."
     return false if identified_by(identity).valid_at.alive.merge(Unidom::Visitor::Identificating.valid_at.alive).count>0
 
-    user           = self.create! opened_at: opened_at
+    user           = create! opened_at: opened_at
     identificating = Unidom::Visitor::Identificating.identificate user, identity
 
     Rails.logger.debug "Authenticate user #{user.id} with password: #{password.inspect}."
