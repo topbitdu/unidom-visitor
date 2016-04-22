@@ -34,3 +34,7 @@
 
 ## v0.6
 1. Improved the Password model for validation of #clear_text
+
+## v0.7
+1. 
+2. Improved the Ruby Gem Specification to depend on unidom-common v0.8
