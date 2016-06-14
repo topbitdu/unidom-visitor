@@ -10,7 +10,7 @@
 
 ## v0.1.1
 1. Improve the Ruby Gem Specification to depend on unidom-common v0.5
-2. Improved the Recognization model for table name
+2. Improve the Recognization model for table name
 
 ## v0.1.2
 1. Improved the User model to fix a wrong class name in the #sign_up method
