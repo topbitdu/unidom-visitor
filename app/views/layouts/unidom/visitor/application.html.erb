@@ -3,12 +3,13 @@
 <head>
   <title>Unidom Visitor</title>
   <%= stylesheet_link_tag    'unidom/visitor/application', media: 'all' %>
-  <%= javascript_include_tag 'unidom/visitor/application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+<%= javascript_include_tag 'unidom/visitor/application' %>
 
 </body>
 </html>
