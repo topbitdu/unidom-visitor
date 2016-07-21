@@ -6,12 +6,15 @@ class Unidom::Visitor::Password < ActiveRecord::Base
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :clear_text, presence: true, length: { in: 6..200 }
+  validates :clear_text,     presence: true, length: { in: 6..200 }
+  validates :pepper_content, presence: true, length: { is: columns_hash['pepper_content'].limit }
 
   has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential
 
+  before_validation :generate_pepper_content
+
   def generate_pepper_content
-    self.pepper_content = self.pepper_content||::SecureRandom.hex(self.class.columns_hash['pepper_content'].limit/2)
+    self.pepper_content = self.pepper_content||SecureRandom.hex(self.class.columns_hash['pepper_content'].limit/2)
   end
 
   def clear_text

@@ -6,6 +6,8 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
 
   self.table_name = 'unidom_authenticatings'
 
+  include Unidom::Common::Concerns::ModelExtension
+
   belongs_to :visitor,    polymorphic: true
   belongs_to :credential, polymorphic: true
 
@@ -15,10 +17,16 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
   scope :visitor_type_is,    ->(visitor_type)    { where visitor_type:    visitor_type    }
   scope :credential_type_is, ->(credential_type) { where credential_type: credential_type }
 
-  include Unidom::Common::Concerns::ModelExtension
-
   def self.authenticate(visitor, credential, opened_at: Time.now)
-    self.create! visitor: visitor, credential: credential, opened_at: opened_at
+    authenticate! visitor, credential, opened_at
+  end
+
+  def self.authenticate!(visitor, credential, opened_at: Time.now)
+    credential_is(credential).visitor_is(visitor).valid_at.alive.first_or_create! opened_at: opened_at
+  end
+
+  class << self
+    deprecate authenticate: :authenticate!, deprecator: ActiveSupport::Deprecation.new('1.0', 'unidom-visitor')
   end
 
 end

@@ -36,5 +36,37 @@
 1. Improved the Password model for validation of #clear_text
 
 ## v0.7
-1. 
-2. Improved the Ruby Gem Specification to depend on unidom-common v0.9
+1. Improve the Authenticating model to add the ::authenticate! method
+2. Improve the Authenticating model to deprecate the ::authenticate method
+3. Improve the Password model to call #generate_pepper_content before validation
+4. Improved the Ruby Gem Specification to depend on unidom-common v0.9
+
+## v0.8
+1. Improve the Identificating model to add the ::identificate! method
+2. Improve the Identificating model to deprecate the ::identificate method
+
+## v0.9
+1. Improve the Recognization model to add the ::cognize! method
+2. Improve the Recognization model to deprecate the ::cognize method
+
+## v1.0
+1. Improve the Authenticating model to support the Keyword Arguments
+2. Improve the Identificating model to support the Keyword Arguments
+3. Improve the Recognization model to support the Keyword Arguments
+4. Remove the deprecated methods
+
+## v1.1
+1. As Visitor concern
+2. As Credential concern
+
+## v1.2
+1. As Identity concern
+2. As Party concern
+
+## v1.3
+1. Improve the As Visitor concern to add the #is_identificated! method & the #is_authenticated! method & the #cognize! method
+2. Improve the As Credential concern to add the #authenticate! method
+
+## v1.4
+1. Improve the As Identity concern to add the #identificate! method
+2. Improve the As Party concern to add the #is_cognized! method

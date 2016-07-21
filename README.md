@@ -38,3 +38,10 @@ if Unidom::Visitor::User.valid_at.alive.first.passwords.valid_at.alive.first.mer
   # Sign in
 end
 ```
+
+### Authenticating model
+```ruby
+user     = Unidom::Visitor::User.create!     opened_at: Time.now
+password = Unidom::Visitor::Password.create! clear_text: 'password', opened_at: Time.now
+Unidom::Visitor::Authenticating.authenticate! user, password
+```
