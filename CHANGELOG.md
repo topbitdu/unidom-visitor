@@ -40,3 +40,7 @@
 2. Improved the Authenticating model to deprecate the ::authenticate method
 3. Improved the Password model to call #generate_pepper_content before validation
 4. Improved the Ruby Gem Specification to depend on unidom-common v0.9
+
+## v0.8
+1. Improved the Identificating model to add the ::identificate! method
+2. Improved the Identificating model to deprecate the ::identificate method
