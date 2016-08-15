@@ -9,7 +9,7 @@
 6. Password model & migration
 
 ## v0.1.1
-1. Improved the Ruby Gem Specification to depend on unidom-common v0.5
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.5
 2. Improved the Recognization model for table name
 
 ## v0.1.2
@@ -30,7 +30,7 @@
 
 ## v0.5
 1. Improved the User model to support the keyword arguments for the password argument in the ::sign_up method
-2. Improved the Ruby Gem Specification to depend on unidom-common v0.7
+2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.7
 
 ## v0.6
 1. Improved the Password model for validation of #clear_text
@@ -39,8 +39,11 @@
 1. Improved the Authenticating model to add the ::authenticate! method
 2. Improved the Authenticating model to deprecate the ::authenticate method
 3. Improved the Password model to call #generate_pepper_content before validation
-4. Improved the Ruby Gem Specification to depend on unidom-common v0.9
+4. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v0.8
 1. Improved the Identificating model to add the ::identificate! method
 2. Improved the Identificating model to deprecate the ::identificate method
+
+## v0.8.1
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
