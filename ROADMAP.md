@@ -48,6 +48,10 @@
 ## v0.8.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
 
+## v0.8.2
+1. Improve the User model for the ::sign_up method
+2. Improve the Authenticating model for the ::authenticate method
+
 ## v0.9
 1. Improve the Recognization model to add the ::cognize! method
 2. Improve the Recognization model to deprecate the ::cognize method

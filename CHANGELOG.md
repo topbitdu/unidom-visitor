@@ -47,3 +47,7 @@
 
 ## v0.8.1
 1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
+
+## v0.8.2
+1. Improve the User model for the ::sign_up method
+2. Improve the Authenticating model for the ::authenticate method

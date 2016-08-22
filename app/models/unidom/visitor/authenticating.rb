@@ -18,7 +18,7 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
   scope :credential_type_is, ->(credential_type) { where credential_type: credential_type }
 
   def self.authenticate(visitor, credential, opened_at: Time.now)
-    authenticate! visitor, credential, opened_at
+    authenticate! visitor, credential, opened_at: opened_at
   end
 
   def self.authenticate!(visitor, credential, opened_at: Time.now)

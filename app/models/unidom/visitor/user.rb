@@ -21,12 +21,12 @@ class Unidom::Visitor::User < ActiveRecord::Base
     return false if identified_by(identity).valid_at.alive.merge(Unidom::Visitor::Identificating.valid_at.alive).count>0
 
     user           = create! opened_at: opened_at
-    identificating = Unidom::Visitor::Identificating.identificate user, identity
+    identificating = Unidom::Visitor::Identificating.identificate! user, as: identity
 
     Rails.logger.debug "Authenticate user #{user.id} with password: #{password.inspect}."
     if password.present?
       credential     = Unidom::Visitor::Password.create! clear_text: password, opened_at: opened_at
-      authenticating = Unidom::Visitor::Authenticating.authenticate user, credential
+      authenticating = Unidom::Visitor::Authenticating.authenticate! user, credential
     end
 
     user
