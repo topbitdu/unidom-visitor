@@ -52,3 +52,10 @@ user  = Unidom::Visitor::User.create! opened_at: Time.now
 email = Unidom::Contact::EmailAddress.full_address_is('name@company.com').valid_at.alive.first_or_create! opened_at: Time.now
 Unidom::Visitor::Identificating.identificate! user, as: email
 ```
+
+### Recognization model
+```ruby
+user   = Unidom::Visitor::User.create! opened_at: Time.now
+person = Unidom::Party::Person.create! name: 'Tim', opened_at: Time.now
+Unidom::Visitor::Recognization.cognize! user, as: person
+```

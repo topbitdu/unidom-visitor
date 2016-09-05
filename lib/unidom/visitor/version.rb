@@ -1,5 +1,5 @@
 module Unidom
   module Visitor
-    VERSION = '0.8.2'.freeze
+    VERSION = '0.9'.freeze
   end
 end
