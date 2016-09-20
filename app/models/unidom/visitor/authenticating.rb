@@ -17,16 +17,8 @@ class Unidom::Visitor::Authenticating < ActiveRecord::Base
   scope :visitor_type_is,    ->(visitor_type)    { where visitor_type:    visitor_type    }
   scope :credential_type_is, ->(credential_type) { where credential_type: credential_type }
 
-  def self.authenticate(visitor, credential, opened_at: Time.now)
-    authenticate! visitor, credential, opened_at: opened_at
-  end
-
-  def self.authenticate!(visitor, credential, opened_at: Time.now)
-    credential_is(credential).visitor_is(visitor).valid_at.alive.first_or_create! opened_at: opened_at
-  end
-
-  class << self
-    deprecate authenticate: :authenticate!, deprecator: ActiveSupport::Deprecation.new('1.0', 'unidom-visitor')
+  def self.authenticate!(visitor, with: nil, opened_at: Time.now)
+    credential_is(with).visitor_is(visitor).valid_at.alive.first_or_create! opened_at: opened_at
   end
 
 end

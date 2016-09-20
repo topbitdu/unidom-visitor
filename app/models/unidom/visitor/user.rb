@@ -26,7 +26,7 @@ class Unidom::Visitor::User < ActiveRecord::Base
     Rails.logger.debug "Authenticate user #{user.id} with password: #{password.inspect}."
     if password.present?
       credential     = Unidom::Visitor::Password.create! clear_text: password, opened_at: opened_at
-      authenticating = Unidom::Visitor::Authenticating.authenticate! user, credential
+      authenticating = Unidom::Visitor::Authenticating.authenticate! user, with: credential
     end
 
     user

@@ -6,22 +6,34 @@
 Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Visitor domain model engine includes User, Guest, Administrator, and Password models.
 Unidom (统一领域对象模型)是一系列的领域模型引擎。访问者领域模型引擎包括用户、游客、管理员和密码的模型。
 
+
+
 ## Recent Update
+
 Check out the [Road Map](ROADMAP.md) to find out what's the next.
 Check out the [Change Log](CHANGELOG.md) to find out what's new.
 
+
+
 ## Usage in Gemfile
+
 ```ruby
 gem 'unidom-visitor'
 ```
 
+
+
 ## Run the Database Migration
+
 ```shell
 rake db:migrate
 ```
 The migration versions start with 200002.
 
+
+
 ## Call the Model
+
 ```ruby
 phone_1 = PhoneNumberIdentity.create phone_number: '13912345678'
 Unidom::Visitor::User.sign_up phone_1, password: 'password', opened_at: Time.now
@@ -43,7 +55,7 @@ end
 ```ruby
 user     = Unidom::Visitor::User.create!     opened_at: Time.now
 password = Unidom::Visitor::Password.create! clear_text: 'password', opened_at: Time.now
-Unidom::Visitor::Authenticating.authenticate! user, password
+Unidom::Visitor::Authenticating.authenticate! user, with: password
 ```
 
 ### Identificating model

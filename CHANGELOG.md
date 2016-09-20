@@ -55,3 +55,9 @@
 ## v0.9
 1. Improved the Recognization model to add the ::cognize! method
 2. Improved the Recognization model to deprecate the ::cognize method
+
+## v1.0
+1. Improve the Authenticating model to support the Keyword Arguments
+2. Improve the Identificating model to support the Keyword Arguments
+3. Improve the Recognization model to support the Keyword Arguments
+4. Remove the deprecated methods
