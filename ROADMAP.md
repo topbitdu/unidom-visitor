@@ -64,16 +64,21 @@
 
 ## v1.1
 1. As Visitor concern
-2. As Credential concern
+2. Improve the User model to include the As Visitor concern
 
 ## v1.2
-1. As Identity concern
-2. As Party concern
+1. As Credential concern
 
 ## v1.3
-1. Improve the As Visitor concern to add the #is_identificated! method & the #is_authenticated! method & the #cognize! method
-2. Improve the As Credential concern to add the #authenticate! method
+1. As Identity concern
 
 ## v1.4
+1. As Party concern
+
+## v1.5
+1. Improve the As Visitor concern to add the #is_identificated! method, the #is_authenticated! method, the #cognize! method, & the .sign_up! method
+2. Improve the As Credential concern to add the #authenticate! method
+
+## v1.6
 1. Improve the As Identity concern to add the #identificate! method
 2. Improve the As Party concern to add the #is_cognized! method
