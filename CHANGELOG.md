@@ -61,3 +61,7 @@
 2. Improve the Identificating model to support the Keyword Arguments
 3. Improve the Recognization model to support the Keyword Arguments
 4. Remove the deprecated methods
+
+## v1.1
+1. As Visitor concern
+2. Improved the User model to include the As Visitor concern
