@@ -65,3 +65,7 @@
 ## v1.1
 1. As Visitor concern
 2. Improved the User model to include the As Visitor concern
+
+## v1.2
+1. As Credential concern
+2. Improve the Password model to include the As Credential concern
