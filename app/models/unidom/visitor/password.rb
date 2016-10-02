@@ -5,11 +5,10 @@ class Unidom::Visitor::Password < ActiveRecord::Base
   self.table_name = 'unidom_passwords'
 
   include Unidom::Common::Concerns::ModelExtension
+  include Unidom::Visitor::Concerns::AsCredential
 
   validates :clear_text,     presence: true, length: { in: 6..200 }
   validates :pepper_content, presence: true, length: { is: columns_hash['pepper_content'].limit }
-
-  has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential
 
   before_validation :generate_pepper_content
 
