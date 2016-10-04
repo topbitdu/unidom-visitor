@@ -78,6 +78,7 @@ Unidom::Visitor::Recognization.cognize! user, as: person
 ## Inlcude the Concerns
 ```ruby
 include Unidom::Visitor::Concerns::AsVisitor
+include Unidom::Visitor::Concerns::AsIdentity
 include Unidom::Visitor::Concerns::AsCredential
 ```
 
@@ -88,6 +89,10 @@ The As Visitor concern do the following tasks for the includer automatically:
 3. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :visitor``
 4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``
+
+### As Identity concern
+The As Identity concern do the following tasks for the includer automatically:  
+1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :identity``
 
 ### As Credential concern
 The As Credential concern do the following tasks for the includer automatically:  
