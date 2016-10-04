@@ -84,10 +84,10 @@ include Unidom::Visitor::Concerns::AsCredential
 
 ### As Visitor concern
 The As Visitor concern do the following tasks for the includer automatically:  
-1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :visitor``
-2. Define the has_many :authenticatings macro as: ``has_many :authenticatings, class_name: 'Unidom::Visitor::Authenticating', as: :visitor``
-3. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :visitor``
-4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``
+1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :visitor``  
+2. Define the has_many :authenticatings macro as: ``has_many :authenticatings, class_name: 'Unidom::Visitor::Authenticating', as: :visitor``  
+3. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :visitor``  
+4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``  
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``
 
 ### As Identity concern
