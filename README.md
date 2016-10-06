@@ -53,6 +53,7 @@ end
 ```
 
 ### Authenticating model
+
 ```ruby
 user     = Unidom::Visitor::User.create!     opened_at: Time.now
 password = Unidom::Visitor::Password.create! clear_text: 'password', opened_at: Time.now
@@ -60,6 +61,7 @@ Unidom::Visitor::Authenticating.authenticate! user, with: password
 ```
 
 ### Identificating model
+
 ```ruby
 user  = Unidom::Visitor::User.create! opened_at: Time.now
 email = Unidom::Contact::EmailAddress.full_address_is('name@company.com').valid_at.alive.first_or_create! opened_at: Time.now
@@ -67,6 +69,7 @@ Unidom::Visitor::Identificating.identificate! user, as: email
 ```
 
 ### Recognization model
+
 ```ruby
 user   = Unidom::Visitor::User.create! opened_at: Time.now
 person = Unidom::Party::Person.create! name: 'Tim', opened_at: Time.now
@@ -76,6 +79,7 @@ Unidom::Visitor::Recognization.cognize! user, as: person
 
 
 ## Inlcude the Concerns
+
 ```ruby
 include Unidom::Visitor::Concerns::AsVisitor
 include Unidom::Visitor::Concerns::AsIdentity
@@ -83,6 +87,7 @@ include Unidom::Visitor::Concerns::AsCredential
 ```
 
 ### As Visitor concern
+
 The As Visitor concern do the following tasks for the includer automatically:  
 1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :visitor``  
 2. Define the has_many :authenticatings macro as: ``has_many :authenticatings, class_name: 'Unidom::Visitor::Authenticating', as: :visitor``  
@@ -91,9 +96,11 @@ The As Visitor concern do the following tasks for the includer automatically:
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``
 
 ### As Identity concern
+
 The As Identity concern do the following tasks for the includer automatically:  
 1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :identity``
 
 ### As Credential concern
+
 The As Credential concern do the following tasks for the includer automatically:  
 1. Define the has_one :authenticatings macro as: ``has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential``
