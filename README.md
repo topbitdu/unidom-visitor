@@ -104,3 +104,8 @@ The As Identity concern do the following tasks for the includer automatically:
 
 The As Credential concern do the following tasks for the includer automatically:  
 1. Define the has_one :authenticatings macro as: ``has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential``
+
+### As Party concern
+
+The As Party concern do the following tasks for the includer automatically:  
+1. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :party``

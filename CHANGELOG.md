@@ -72,3 +72,6 @@
 
 ## v1.3
 1. As Identity concern
+
+## v1.4
+1. As Party concern
