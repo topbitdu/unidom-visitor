@@ -77,9 +77,16 @@
 1. As Party concern
 
 ## v1.5
-1. Improve the As Visitor concern to add the #is_identificated! method, the #is_authenticated! method, the #cognize! method, & the .sign_up! method
-2. Improve the As Credential concern to add the #authenticate! method
+1. Improve the As Identity concern to add the #identificate! method
+2. Improve the As Visitor concern to add the #is_identificated! method
 
 ## v1.6
-1. Improve the As Identity concern to add the #identificate! method
+1. Improve the As Credential concern to add the #authenticate! method
+2. Improve the As Visitor concern to add the #is_authenticated! method
+
+## v1.7
+1. Improve the As Visitor concern to add the #cognize! method
 2. Improve the As Party concern to add the #is_cognized! method
+
+## v1.8
+1. Improve the As Visitor concern to add the .sign_up! method
