@@ -79,3 +79,7 @@
 ## v1.5
 1. Improve the As Identity concern to add the #identificate! method
 2. Improve the As Visitor concern to add the #is_identificated! method
+
+## v1.6
+1. Improve the As Credential concern to add the #authenticate! method
+2. Improve the As Visitor concern to add the #is_authenticated! method

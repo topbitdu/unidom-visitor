@@ -95,6 +95,7 @@ The As Visitor concern do the following tasks for the includer automatically:
 4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``  
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``
 6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``
+7. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``
 
 ### As Identity concern
 
@@ -106,6 +107,7 @@ The As Identity concern do the following tasks for the includer automatically:
 
 The As Credential concern do the following tasks for the includer automatically:  
 1. Define the has_one :authenticatings macro as: ``has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential``
+2. Define the #authenticate! method as: ``authenticate!(it, at: Time.now, flag_code: 'RQRD')``
 
 ### As Party concern
 
