@@ -24,11 +24,9 @@ module Unidom::Visitor::Concerns::AsVisitor
       end
     end
 
-=begin
     def cognize!(it, at: Time.now, primary: true)
       recognizations.create! party: it, elemental: primary, opened_at: at
     end
-=end
 
   end
 
