@@ -84,6 +84,7 @@ Unidom::Visitor::Recognization.cognize! user, as: person
 include Unidom::Visitor::Concerns::AsVisitor
 include Unidom::Visitor::Concerns::AsIdentity
 include Unidom::Visitor::Concerns::AsCredential
+include Unidom::Visitor::Concerns::AsParty
 ```
 
 ### As Visitor concern
