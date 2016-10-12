@@ -96,6 +96,7 @@ The As Visitor concern do the following tasks for the includer automatically:
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``
 6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``
 7. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``
+8. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``
 
 ### As Identity concern
 
@@ -113,3 +114,4 @@ The As Credential concern do the following tasks for the includer automatically:
 
 The As Party concern do the following tasks for the includer automatically:  
 1. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :party``
+2. Define the #is_cognized! method as: ``is_cognized!(via: nil, at: Time.now, primary: true)``

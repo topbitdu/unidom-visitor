@@ -83,3 +83,7 @@
 ## v1.6
 1. Improve the As Credential concern to add the #authenticate! method
 2. Improve the As Visitor concern to add the #is_authenticated! method
+
+## v1.7
+1. Improve the As Visitor concern to add the #cognize! method
+2. Improve the As Party concern to add the #is_cognized! method
