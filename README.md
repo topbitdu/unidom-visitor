@@ -97,7 +97,8 @@ The As Visitor concern do the following tasks for the includer automatically:
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``  
 6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``  
 7. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``  
-8. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``
+8. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``  
+9. Define the .sign_up! method as: ``sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)``
 
 ### As Identity concern
 
