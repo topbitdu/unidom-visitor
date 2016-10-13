@@ -32,14 +32,13 @@ module Unidom::Visitor::Concerns::AsVisitor
 
   module ClassMethods
 
-=begin
     def sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)
-      cognize! it,      primary: true,    at: at
-      is_identificated! as:      as,      at: at
-      is_authenticated! through: through, at: at
-      self
+      user = create! opened_at: at
+      user.cognize! it,      primary: true,    at: at
+      user.is_identificated! as:      as,      at: at
+      user.is_authenticated! through: through, at: at
+      user
     end
-=end
 
   end
 
