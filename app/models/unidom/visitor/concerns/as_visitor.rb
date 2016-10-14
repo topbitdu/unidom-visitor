@@ -16,6 +16,13 @@ module Unidom::Visitor::Concerns::AsVisitor
       identificatings.create! identity: as, opened_at: at
     end
 
+    def is_identificated?(as: nil, at: Time.now)
+      query = identificatings
+      query = query.identity_is as      if as.present?
+      query = query.valid_at    now: at if at.present?
+      query.alive.exists?
+    end
+
     def is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')
       if through.authenticating.present?
         through.authenticating
@@ -24,9 +31,29 @@ module Unidom::Visitor::Concerns::AsVisitor
       end
     end
 
+=begin
+    def is_authenticated?(through: nil, at: Time.now, flag_code: 'RQRD')
+      query = authenticatings
+      query = query.credential_is through   if through.present?
+      query = query.flag_coded_as flag_code if flag_code.present?
+      query = query.valid_at      now: at   if at.present?
+      query.alive.exists?
+    end
+=end
+
     def cognize!(it, at: Time.now, primary: true)
       recognizations.create! party: it, elemental: primary, opened_at: at
     end
+
+=begin
+    def cognize?(it, at: Time.now, primary: true)
+      query = recognizations
+      query = query.party_is it      if it.present?
+      query = query.primary  primary unless primary.nil?
+      query = query.valid_at now: at if at.present?
+      query.alive.exists?
+    end
+=end
 
   end
 
