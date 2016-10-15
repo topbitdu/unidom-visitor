@@ -90,3 +90,7 @@
 
 ## v1.8
 1. Improve the As Visitor concern to add the .sign_up! method
+
+## v1.9
+1. Improve the As Identity concern to add the #identificate? method
+2. Improve the As Visitor concern to add the #is_identificated? method

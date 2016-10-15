@@ -96,15 +96,17 @@ The As Visitor concern do the following tasks for the includer automatically:
 4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``  
 5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``  
 6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``  
-7. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``  
-8. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``  
-9. Define the .sign_up! method as: ``sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)``
+7. Define the #is_identificated? method as: ``is_identificated?(as: nil, at: Time.now)``  
+8. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``  
+9. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``  
+10. Define the .sign_up! method as: ``sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)``
 
 ### As Identity concern
 
 The As Identity concern do the following tasks for the includer automatically:  
 1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :identity``  
-2. Define the #identificate! method as: ``identificate!(it, at: Time.now)``
+2. Define the #identificate! method as: ``identificate!(it, at: Time.now)``  
+3. Define the #identificate? method as: ``identificate?(it, at: Time.now)``
 
 ### As Credential concern
 
