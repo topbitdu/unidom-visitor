@@ -31,7 +31,6 @@ module Unidom::Visitor::Concerns::AsVisitor
       end
     end
 
-=begin
     def is_authenticated?(through: nil, at: Time.now, flag_code: 'RQRD')
       query = authenticatings
       query = query.credential_is through   if through.present?
@@ -39,7 +38,6 @@ module Unidom::Visitor::Concerns::AsVisitor
       query = query.valid_at      now: at   if at.present?
       query.alive.exists?
     end
-=end
 
     def cognize!(it, at: Time.now, primary: true)
       recognizations.create! party: it, elemental: primary, opened_at: at
