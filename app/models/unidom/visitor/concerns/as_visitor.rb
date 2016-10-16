@@ -43,7 +43,6 @@ module Unidom::Visitor::Concerns::AsVisitor
       recognizations.create! party: it, elemental: primary, opened_at: at
     end
 
-=begin
     def cognize?(it, at: Time.now, primary: true)
       query = recognizations
       query = query.party_is it      if it.present?
@@ -51,7 +50,6 @@ module Unidom::Visitor::Concerns::AsVisitor
       query = query.valid_at now: at if at.present?
       query.alive.exists?
     end
-=end
 
   end
 
