@@ -98,8 +98,9 @@ The As Visitor concern do the following tasks for the includer automatically:
 6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``  
 7. Define the #is_identificated? method as: ``is_identificated?(as: nil, at: Time.now)``  
 8. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``  
-9. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``  
-10. Define the .sign_up! method as: ``sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)``
+9. Define the #is_authenticated? method as: ``is_authenticated?(through: nil, at: Time.now, flag_code: 'RQRD')``  
+10. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``  
+11. Define the .sign_up! method as: ``sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)``
 
 ### As Identity concern
 
@@ -112,7 +113,8 @@ The As Identity concern do the following tasks for the includer automatically:
 
 The As Credential concern do the following tasks for the includer automatically:  
 1. Define the has_one :authenticatings macro as: ``has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential``  
-2. Define the #authenticate! method as: ``authenticate!(it, at: Time.now, flag_code: 'RQRD')``
+2. Define the #authenticate! method as: ``authenticate!(it, at: Time.now, flag_code: 'RQRD')``  
+3. Define the #authenticate? method as: ``authenticate?(it, at: Time.now, flag_code: 'RQRD')``
 
 ### As Party concern
 
