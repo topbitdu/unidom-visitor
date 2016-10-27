@@ -2,7 +2,7 @@
 # flag_code 有4个枚举值：RQRD (required)、SFCT (sufficient)、RQST (requisite)、OPTN (optional)。
 # 各枚举值的含义见： http://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html 。
 
-class Unidom::Visitor::Authenticating < ActiveRecord::Base
+class Unidom::Visitor::Authenticating < Unidom::Visitor::ApplicationRecord
 
   self.table_name = 'unidom_authenticatings'
 
