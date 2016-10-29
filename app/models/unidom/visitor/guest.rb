@@ -1,6 +1,6 @@
 # Guest 是系统访客。
 
-class Unidom::Visitor::Guest < ActiveRecord::Base
+class Unidom::Visitor::Guest < Unidom::Visitor::ApplicationRecord
 
   self.table_name = 'unidom_guests'
 
