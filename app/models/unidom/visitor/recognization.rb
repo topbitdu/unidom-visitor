@@ -1,6 +1,6 @@
 # Recognization 是访问者识别，用于维护访问者和参与者的对应关系。
 
-class Unidom::Visitor::Recognization < ActiveRecord::Base
+class Unidom::Visitor::Recognization < Unidom::Visitor::ApplicationRecord
 
   self.table_name = 'unidom_recognizations'
 
