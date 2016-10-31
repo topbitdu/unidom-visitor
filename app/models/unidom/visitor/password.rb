@@ -1,6 +1,6 @@
 # Password 是密码。
 
-class Unidom::Visitor::Password < ActiveRecord::Base
+class Unidom::Visitor::Password < Unidom::Visitor::ApplicationRecord
 
   self.table_name = 'unidom_passwords'
 
