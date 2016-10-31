@@ -1,6 +1,6 @@
 # User 是系统用户。
 
-class Unidom::Visitor::User < ActiveRecord::Base
+class Unidom::Visitor::User < Unidom::Visitor::ApplicationRecord
 
   self.table_name = 'unidom_users'
 
