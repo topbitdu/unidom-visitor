@@ -108,3 +108,10 @@
 
 ## v1.11.2
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7
+
+## v1.12
+1. Flag enum code
+2. Improve the Authenticating model to configure the Flag enum code
+
+## v1.13
+1. Platform enum code
