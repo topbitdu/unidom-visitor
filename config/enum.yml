@@ -1,0 +1,16 @@
+enum:
+
+  # http://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html
+  unidom_flag:
+    required:
+      code: 'RQRD'
+      description: '必须通过相关的登录模块认证，但无论成功还是失败，认证都将继续处理后续的登录模块。'
+    sufficient:
+      code: 'SFCT'
+      description: '仅当相关的登录模块成功，整个认证才视为是成功的。如果成功，认证将继续处理后续的登录模块；如果失败，将结束认证并返回应用。'
+    requisite:
+      code: 'RQST'
+      description: '只要相关的登录模块认证成功，则整个认证就是成功的。如果相关的认证成功，就返回应用，不再继续处理后续的登录模块；如果认证失败，则继续处理后续的登录模块。'
+    optional:
+      code: 'OPTN'
+      description: '相关的登录模块认证并非必需要成功。不论相关认证成功与否，都将继续处理后续的登录模块。'
