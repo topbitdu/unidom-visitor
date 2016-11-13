@@ -123,3 +123,17 @@ The As Party concern do the following tasks for the includer automatically:
 1. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :party``  
 2. Define the #is_cognized! method as: ``is_cognized!(via: nil, at: Time.now, primary: true)``  
 3. Define the #is_cognized? method as: ``is_cognized!(via: nil, at: Time.now, primary: true)``
+
+
+
+## Enum codes
+
+### Flag enum code
+
+```ruby
+# http://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html
+Unidom::Visitor::Flag::REQUIRED
+Unidom::Visitor::Flag::SUFFICIENT
+Unidom::Visitor::Flag::REQUISITE
+Unidom::Visitor::Flag::OPTIONAL
+```
