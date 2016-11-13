@@ -7,6 +7,7 @@ class Unidom::Visitor::Authenticating < Unidom::Visitor::ApplicationRecord
   self.table_name = 'unidom_authenticatings'
 
   include Unidom::Common::Concerns::ModelExtension
+  include ProgneTapera::EnumCode
 
   belongs_to :visitor,    polymorphic: true
   belongs_to :credential, polymorphic: true
@@ -20,5 +21,7 @@ class Unidom::Visitor::Authenticating < Unidom::Visitor::ApplicationRecord
   def self.authenticate!(visitor, with: nil, opened_at: Time.now)
     credential_is(with).visitor_is(visitor).valid_at.alive.first_or_create! opened_at: opened_at
   end
+
+  code :flag, Unidom::Visitor::Flag
 
 end
