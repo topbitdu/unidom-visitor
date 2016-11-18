@@ -60,7 +60,7 @@
 1. Improved the Authenticating model to support the Keyword Arguments
 2. Improved the Identificating model to support the Keyword Arguments
 3. Improved the Recognization model to support the Keyword Arguments
-4. Remove the deprecated methods
+4. Removed the deprecated methods
 
 ## v1.1
 1. As Visitor concern
