@@ -40,7 +40,8 @@ class Unidom::Visitor::Password < Unidom::Visitor::ApplicationRecord
     authenticating.soft_destroy
     password = self.class.new clear_text: new_password, opened_at: Time.now
     if password.save
-      Unidom::Visitor::Authenticating.authenticate visitor, password
+      #Unidom::Visitor::Authenticating.authenticate visitor, password
+      Unidom::Visitor::Authenticating.authenticate! visitor, with: password
     else
       nil
     end
