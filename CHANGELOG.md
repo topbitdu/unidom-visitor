@@ -112,3 +112,6 @@
 ## v1.12
 1. Flag enum code
 2. Improve the Authenticating model to configure the Flag enum code
+
+## v1.12.1
+1. Improve the Password model for the #change_to method
