@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Identificating model & migration (20000201000000)
-2. Authenticating model & migration
+2. Authenticating model & migration (20000202000000)
 3. Recognization model & migration
 4. Guest model & migration
 5. User model & migration
