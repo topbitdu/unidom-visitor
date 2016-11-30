@@ -16,7 +16,7 @@
 1. Improve the User model to fix a wrong class name in the #sign_up method
 
 ## v0.2
-1. Improved the Authenticating model to add the #visitor_type_is scope & the #credential_type_is scope
+1. Improve the Authenticating model to add the #visitor_type_is scope & the #credential_type_is scope
 2. Improved the Password model to fix a wrong class name in the #change_to method
 
 ## v0.3
