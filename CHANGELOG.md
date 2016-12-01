@@ -68,7 +68,7 @@
 
 ## v1.2
 1. As Credential concern
-2. Improve the Password model to include the As Credential concern
+2. Improved the Password model to include the As Credential concern
 
 ## v1.3
 1. As Identity concern
