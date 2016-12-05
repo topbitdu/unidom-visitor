@@ -116,5 +116,8 @@
 ## v1.12.1
 1. Improve the Password model for the #change_to method
 
+## v1.12.2
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
+
 ## v1.13
 1. Platform enum code
