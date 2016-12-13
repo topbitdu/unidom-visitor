@@ -77,7 +77,7 @@
 1. As Party concern
 
 ## v1.5
-1. Improve the As Identity concern to add the #identificate! method
+1. Improved the As Identity concern to add the #identificate! method
 2. Improve the As Visitor concern to add the #is_identificated! method
 
 ## v1.6
