@@ -5,7 +5,7 @@
 2. Authenticating model & migration (20000202000000)
 3. Recognization model & migration (20000203000000)
 4. Guest model & migration (20000210000000)
-5. User model & migration
+5. User model & migration (20000211000000)
 6. Password model & migration
 
 ## v0.1.1
