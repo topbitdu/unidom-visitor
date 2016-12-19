@@ -6,7 +6,7 @@
 3. Recognization model & migration (20000203000000)
 4. Guest model & migration (20000210000000)
 5. User model & migration (20000211000000)
-6. Password model & migration
+6. Password model & migration (20000220000000)
 
 ## v0.1.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.5
