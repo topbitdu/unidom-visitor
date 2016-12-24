@@ -20,7 +20,7 @@
 2. Improve the Password model to fix a wrong class name in the #``change_to`` method
 
 ## v0.3
-1. Improve the Recognization model to support the keyword arguments in the ::cognize method
+1. Improve the Recognization model to support the keyword arguments in the .``cognize`` method
 2. Improved the User model to support the keyword arguments in the ::sign_up method
 
 ## v0.4
