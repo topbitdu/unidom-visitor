@@ -1,3 +1,4 @@
+##
 # Authenticating 是身份鉴定，存储访问者(visitor)和信任状(credential)之间的关系。
 # flag_code 有4个枚举值：RQRD (required)、SFCT (sufficient)、RQST (requisite)、OPTN (optional)。
 # 各枚举值的含义见： http://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html 。
