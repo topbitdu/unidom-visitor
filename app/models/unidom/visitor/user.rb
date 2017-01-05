@@ -1,3 +1,4 @@
+##
 # User 是系统用户。
 
 class Unidom::Visitor::User < Unidom::Visitor::ApplicationRecord
