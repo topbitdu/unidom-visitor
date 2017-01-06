@@ -1,3 +1,4 @@
+##
 # Guest 是系统访客。
 
 class Unidom::Visitor::Guest < Unidom::Visitor::ApplicationRecord
