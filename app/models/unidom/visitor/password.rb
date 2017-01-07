@@ -1,3 +1,4 @@
+##
 # Password 是密码。
 
 class Unidom::Visitor::Password < Unidom::Visitor::ApplicationRecord
