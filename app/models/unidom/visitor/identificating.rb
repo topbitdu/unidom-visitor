@@ -1,3 +1,4 @@
+##
 # Identificating 是身份关联，存储身份(identity)和访问者(visitor)之间的关联关系。
 
 class Unidom::Visitor::Identificating < Unidom::Visitor::ApplicationRecord
