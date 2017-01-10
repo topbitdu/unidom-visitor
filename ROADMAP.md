@@ -121,7 +121,7 @@
 
 ## v1.12.3
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
-2. Improve the Engine class to include the Engine Extension
+2. Improve the Engine class to include the Engine Extension concern
 
 ## v1.13
 1. Platform enum code
