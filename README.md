@@ -1,6 +1,8 @@
 # Unidom Visitor 访问者领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-visitor/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-visitor.svg)](https://badge.fury.io/rb/unidom-visitor)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-visitor.svg)](https://gemnasium.com/github.com/topbitdu/unidom-visitor)
 
@@ -89,39 +91,39 @@ include Unidom::Visitor::Concerns::AsParty
 
 ### As Visitor concern
 
-The As Visitor concern do the following tasks for the includer automatically:  
-1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :visitor``  
-2. Define the has_many :authenticatings macro as: ``has_many :authenticatings, class_name: 'Unidom::Visitor::Authenticating', as: :visitor``  
-3. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :visitor``  
-4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``  
-5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``  
-6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``  
-7. Define the #is_identificated? method as: ``is_identificated?(as: nil, at: Time.now)``  
-8. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``  
-9. Define the #is_authenticated? method as: ``is_authenticated?(through: nil, at: Time.now, flag_code: 'RQRD')``  
-10. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``  
-11. Define the #cognize? method as: ``cognize?(it, at: Time.now, primary: true)``  
+The As Visitor concern do the following tasks for the includer automatically:
+1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :visitor``
+2. Define the has_many :authenticatings macro as: ``has_many :authenticatings, class_name: 'Unidom::Visitor::Authenticating', as: :visitor``
+3. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :visitor``
+4. Define the .identified_by scope as: ``scope :identified_by, ->(identity) { joins(:identificatings).merge(Unidom::Visitor::Identificating.identity_is identity) }``
+5. Define the .sign_up method as: ``sign_up(identity, password: nil, opened_at: Time.now)``
+6. Define the #is_identificated! method as: ``is_identificated!(as: nil, at: Time.now)``
+7. Define the #is_identificated? method as: ``is_identificated?(as: nil, at: Time.now)``
+8. Define the #is_authenticated! method as: ``is_authenticated!(through: nil, at: Time.now, flag_code: 'RQRD')``
+9. Define the #is_authenticated? method as: ``is_authenticated?(through: nil, at: Time.now, flag_code: 'RQRD')``
+10. Define the #cognize! method as: ``cognize!(it, at: Time.now, primary: true)``
+11. Define the #cognize? method as: ``cognize?(it, at: Time.now, primary: true)``
 12. Define the .sign_up! method as: ``sign_up!(it, as: nil, through: nil, at: Time.now, flag_code: 'RQRD', primary: true)``
 
 ### As Identity concern
 
-The As Identity concern do the following tasks for the includer automatically:  
-1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :identity``  
-2. Define the #identificate! method as: ``identificate!(it, at: Time.now)``  
+The As Identity concern do the following tasks for the includer automatically:
+1. Define the has_many :identificatings macro as: ``has_many :identificatings, class_name: 'Unidom::Visitor::Identificating', as: :identity``
+2. Define the #identificate! method as: ``identificate!(it, at: Time.now)``
 3. Define the #identificate? method as: ``identificate?(it, at: Time.now)``
 
 ### As Credential concern
 
-The As Credential concern do the following tasks for the includer automatically:  
-1. Define the has_one :authenticatings macro as: ``has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential``  
-2. Define the #authenticate! method as: ``authenticate!(it, at: Time.now, flag_code: 'RQRD')``  
+The As Credential concern do the following tasks for the includer automatically:
+1. Define the has_one :authenticatings macro as: ``has_one :authenticating, class_name: 'Unidom::Visitor::Authenticating', as: :credential``
+2. Define the #authenticate! method as: ``authenticate!(it, at: Time.now, flag_code: 'RQRD')``
 3. Define the #authenticate? method as: ``authenticate?(it, at: Time.now, flag_code: 'RQRD')``
 
 ### As Party concern
 
-The As Party concern do the following tasks for the includer automatically:  
-1. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :party``  
-2. Define the #is_cognized! method as: ``is_cognized!(via: nil, at: Time.now, primary: true)``  
+The As Party concern do the following tasks for the includer automatically:
+1. Define the has_many :recognizations macro as: ``has_many :recognizations, class_name: 'Unidom::Visitor::Recognization', as: :party``
+2. Define the #is_cognized! method as: ``is_cognized!(via: nil, at: Time.now, primary: true)``
 3. Define the #is_cognized? method as: ``is_cognized!(via: nil, at: Time.now, primary: true)``
 
 
