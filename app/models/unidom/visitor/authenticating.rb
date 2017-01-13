@@ -19,6 +19,9 @@ class Unidom::Visitor::Authenticating < Unidom::Visitor::ApplicationRecord
   scope :visitor_type_is,    ->(visitor_type)    { where visitor_type:    visitor_type    }
   scope :credential_type_is, ->(credential_type) { where credential_type: credential_type }
 
+  ##
+  # 将访问者 visitor 和信任状 credential 关联起来。关联时间是 opened_at ，缺省是当前时间。如：
+  # Unidom::Visitor::Authenticating.authenticate! user, with: password
   def self.authenticate!(visitor, with: nil, opened_at: Time.now)
     credential_is(with).visitor_is(visitor).valid_at.alive.first_or_create! opened_at: opened_at
   end
