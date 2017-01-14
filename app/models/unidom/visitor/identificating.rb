@@ -17,6 +17,9 @@ class Unidom::Visitor::Identificating < Unidom::Visitor::ApplicationRecord
     visitor_is(visitor).first.try :identity
   end
 
+  ##
+  # 将访问者 visitor 和参与者 party 进行身份关联。关联时间是 at ，缺省为当前时间。如：
+  # Unidom::Visitor::Identificating.identificate! user, as: email
   def self.identificate!(visitor, as: nil, at: Time.now)
     self.visitor_is(visitor).identity_is(as).valid_at.alive.first_or_create! opened_at: at
   end
