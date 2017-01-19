@@ -35,6 +35,9 @@ class Unidom::Visitor::Password < Unidom::Visitor::ApplicationRecord
     Digest::SHA512.hexdigest "#{::Rails.application.secrets[:secret_key_base]}#{clear_text}#{self.pepper_content}"
   end
 
+  ##
+  # 将当前密码更换为指定的新密码。如：
+  # password.change_to 'newpassword'
   def change_to(new_password)
     visitor = authenticating.visitor
     soft_destroy
