@@ -10,6 +10,9 @@ class Unidom::Visitor::User < Unidom::Visitor::ApplicationRecord
 
   has_many :passwords, through: :authenticatings, source: :credential, source_type: 'Unidom::Visitor::Password'
 
+  ##
+  # 注册用户。用户的登录账号是 identity ，密码是 password ，注册时间是 opened_at ，缺省为当前时间。如：
+  # Unidom::Visitor::User.sign_up email, password: 'yourpassword'
   def self.sign_up(identity, password: nil, opened_at: Time.now)
 
     Rails.logger.debug "Signing up user with identity: #{identity.inspect}."
