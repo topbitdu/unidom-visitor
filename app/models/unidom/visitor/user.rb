@@ -31,4 +31,4 @@ class Unidom::Visitor::User < Unidom::Visitor::ApplicationRecord
 
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::User'
