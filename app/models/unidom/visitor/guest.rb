@@ -11,4 +11,4 @@ class Unidom::Visitor::Guest < Unidom::Visitor::ApplicationRecord
 
   scope :platform_specific_identification_is, ->(platform_specific_identification) { where platform_specific_identification: platform_specific_identification }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Guest'
