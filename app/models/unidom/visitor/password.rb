@@ -53,4 +53,4 @@ class Unidom::Visitor::Password < Unidom::Visitor::ApplicationRecord
 
   private :hash
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Password'
