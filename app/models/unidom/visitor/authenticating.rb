@@ -28,4 +28,4 @@ class Unidom::Visitor::Authenticating < Unidom::Visitor::ApplicationRecord
 
   code :flag, Unidom::Visitor::Flag
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Authenticating'
