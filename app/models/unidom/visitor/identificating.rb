@@ -24,4 +24,4 @@ class Unidom::Visitor::Identificating < Unidom::Visitor::ApplicationRecord
     self.visitor_is(visitor).identity_is(as).valid_at.alive.first_or_create! opened_at: at
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Identificating'
