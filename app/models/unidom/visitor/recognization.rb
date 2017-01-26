@@ -28,4 +28,4 @@ class Unidom::Visitor::Recognization < Unidom::Visitor::ApplicationRecord
     end
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Recognization'
