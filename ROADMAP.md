@@ -128,4 +128,9 @@
 2. Improve the models to support the namespace neglecting
 
 ## v1.13
+1. Models RSpec examples manifest
+2. Types RSpec examples manifest
+3. Validators RSpec examples manifest
+
+## v1.14
 1. Platform enum code
