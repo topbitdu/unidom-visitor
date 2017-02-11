@@ -1,0 +1,6 @@
+require 'rspec/models/unidom/visitor/authenticating_spec' unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Authenticating'
+require 'rspec/models/unidom/visitor/guest_spec'          unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Guest'
+require 'rspec/models/unidom/visitor/identificating_spec' unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Identificating'
+require 'rspec/models/unidom/visitor/password_spec'       unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Password'
+require 'rspec/models/unidom/visitor/recognization_spec'  unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Recognization'
+require 'rspec/models/unidom/visitor/user_spec'           unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::User'
