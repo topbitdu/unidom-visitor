@@ -132,5 +132,10 @@
 2. Types RSpec examples manifest
 3. Validators RSpec examples manifest
 
+## v1.13.1
+1. Improve the Authenticating spec for the validations on the #flag_code attribute
+2. Improve the Guest spec for the validations on the #platform_specific_identification attribute
+3. Improve the Password spec for the validations on the #clear_text attribute, & the #pepper_content attribute
+
 ## v1.14
 1. Platform enum code
