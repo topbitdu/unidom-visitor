@@ -18,6 +18,8 @@ describe Unidom::Visitor::Authenticating, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
+    it_behaves_like 'ProgneTapera::EnumCode', described_class.new(model_attributes), :flag, Unidom::Visitor::Flag
+
   end
 
 end
