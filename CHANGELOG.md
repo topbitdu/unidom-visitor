@@ -136,3 +136,7 @@
 1. Improve the Authenticating spec for the validations on the #flag_code attribute
 2. Improve the Guest spec for the validations on the #platform_specific_identification attribute
 3. Improve the Password spec for the validations on the #clear_text attribute, & the #pepper_content attribute
+
+## v1.13.2
+1. Improve the Authenticating spec for the ``belongs_to :visitor, polymorphic: true`` macro, & the ``belongs_to :credential, polymorphic: true`` macro
+2. Improve the Identificating spec for the ``belongs_to :visitor, polymorphic: true`` macro
