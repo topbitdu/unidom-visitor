@@ -28,6 +28,9 @@ describe Unidom::Visitor::Authenticating, type: :model do
     it_behaves_like 'belongs_to', model_attributes, :visitor,    Unidom::Visitor::Guest,    guest_attributes
     it_behaves_like 'belongs_to', model_attributes, :credential, Unidom::Visitor::Password, password_attributes
 
+    it_behaves_like 'polymorphic scope', model_attributes, :visitor_is,    :visitor,    [ Unidom::Visitor::User, Unidom::Visitor::Guest ]
+    it_behaves_like 'polymorphic scope', model_attributes, :credential_is, :credential, [ Unidom::Visitor::Password                     ]
+
   end
 
 end
