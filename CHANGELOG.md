@@ -140,3 +140,7 @@
 ## v1.13.2
 1. Improve the Authenticating spec for the ``belongs_to :visitor, polymorphic: true`` macro, & the ``belongs_to :credential, polymorphic: true`` macro
 2. Improve the Identificating spec for the ``belongs_to :visitor, polymorphic: true`` macro
+
+## v1.13.3
+1. Improve the Authenticating spec for the visitor_is scope, & the credential_is scope
+2. Improve the Identificating spec for the visitor_is scope
