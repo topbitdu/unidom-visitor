@@ -34,6 +34,14 @@ describe Unidom::Visitor::Guest, type: :model do
       { platform_specific_identification: '1'*(platform_specific_identification_max_length+1) } => 1,
       { platform_specific_identification: 'A'*(platform_specific_identification_max_length+1) } => 1
 
+    new_platform_specific_identification = 'ABCDEFGHIJKLMNOP'
+    it_behaves_like 'scope', :platform_specific_identification_is, [
+      { attributes_collection: [ model_attributes                                                                               ], count_diff: 1, args: [ model_attributes[:platform_specific_identification] ] },
+      { attributes_collection: [ model_attributes                                                                               ], count_diff: 0, args: [ new_platform_specific_identification                ] },
+      { attributes_collection: [ model_attributes.merge(platform_specific_identification: new_platform_specific_identification) ], count_diff: 0, args: [ model_attributes[:platform_specific_identification] ] },
+      { attributes_collection: [ model_attributes.merge(platform_specific_identification: new_platform_specific_identification) ], count_diff: 1, args: [ new_platform_specific_identification                ] },
+    ]
+
   end
 
 end
