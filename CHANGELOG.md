@@ -144,3 +144,7 @@
 ## v1.13.3
 1. Improve the Authenticating spec for the visitor_is scope, & the credential_is scope
 2. Improve the Identificating spec for the visitor_is scope
+
+## v1.13.4
+1. Improve the Recognization spec for the ``belongs_to :visitor, polymorphic: true`` macro
+2. Improve the Guest spec for the platform_specific_identification_is scope
