@@ -149,5 +149,9 @@
 1. Improve the Recognization spec for the ``belongs_to :visitor, polymorphic: true`` macro
 2. Improve the Guest spec for the platform_specific_identification_is scope
 
+## v1.13.5
+1. Improve the Guest spec for the validations on the #platform_specific_identification attribute
+2. Improve the Password spec for the validations on the #clear_text attribute, & the #pepper_content attribute
+
 ## v1.14
 1. Platform enum code
