@@ -13,6 +13,10 @@ class Unidom::Visitor::Identificating < Unidom::Visitor::ApplicationRecord
   scope :identity_is, ->(identity) { where identity: identity }
   scope :visitor_is,  ->(visitor)  { where visitor:  visitor  }
 
+  ##
+  # 根据访问者 visitor ，找到其对应的登录身份标示 identity （如手机号码或自定义用户名）。如：
+  # mobile_phone_number = Unidom::Visitor::Identificating.find_identity user
+  # puts mobile_phone_number.phone_number
   def self.find_identity(visitor)
     visitor_is(visitor).first.try :identity
   end
