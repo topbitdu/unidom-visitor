@@ -153,5 +153,10 @@
 1. Improve the Guest spec for the validations on the #platform_specific_identification attribute
 2. Improve the Password spec for the validations on the #clear_text attribute, & the #pepper_content attribute
 
+## v1.13.6
+1. As Credential shared examples
+2. RSpec shared examples manifest
+3. Improve the Password spec for the As Credential concern
+
 ## v1.14
 1. Platform enum code
