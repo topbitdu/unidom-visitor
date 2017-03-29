@@ -1,3 +1,5 @@
+require 'rspec/models/unidom/visitor/concerns/as_credential_shared_examples'
+
 describe Unidom::Visitor::Password, type: :model do
 
   before :each do
@@ -13,6 +15,7 @@ describe Unidom::Visitor::Password, type: :model do
     }
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
+    it_behaves_like 'Unidom::Visitor::Concerns::AsCredential',  model_attributes
 
     it_behaves_like 'validates text', model_attributes, :clear_text,
       length: 6..200
