@@ -160,6 +160,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/visitor/models_rspec'
@@ -169,4 +171,32 @@ require 'unidom/visitor/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/visitor/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# The Unidom::Visitor::Password model already include the Unidom::Visitor::Concerns::AsCredential concern
+
+# app/models/your_credential.rb
+class YourCredential < ApplicationRecord
+
+  include Unidom::Common::Concerns::ModelExtension
+  include Unidom::Visitor::Concerns::AsCredential
+
+end
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/visitor/rspec_shared_examples'
+
+# spec/models/your_credential_spec.rb
+describe YourCredential, type: :model do
+
+  model_attribtues = {
+    your_attribute: 'your value'
+  }
+
+  it_behaves_like 'Unidom::Visitor::Concerns::AsCredential', model_attribtues
+
+end
 ```
