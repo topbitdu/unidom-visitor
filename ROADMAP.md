@@ -158,5 +158,9 @@
 2. RSpec shared examples manifest
 3. Improve the Password spec for the As Credential concern
 
+## v1.13.7
+1. Improve the Authenticating model for the argument validations of the .authenticate! method
+2. Improve the Authenticating spec for the argument validations of the .authenticate! method
+
 ## v1.14
 1. Platform enum code
