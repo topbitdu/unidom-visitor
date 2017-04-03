@@ -25,7 +25,13 @@ class Unidom::Visitor::Authenticating < Unidom::Visitor::ApplicationRecord
   # 将访问者 visitor 和信任状 credential 关联起来。关联时间是 opened_at ，缺省是当前时间。如：
   # Unidom::Visitor::Authenticating.authenticate! user, with: password
   def self.authenticate!(visitor, with: nil, opened_at: Time.now)
+
+    assert_present! :visitor,   visitor
+    assert_present! :with,      with
+    assert_present! :opened_at, opened_at
+
     credential_is(with).visitor_is(visitor).valid_at.alive.first_or_create! opened_at: opened_at
+
   end
 
 end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Visitor::Authenticating'
