@@ -31,6 +31,10 @@ describe Unidom::Visitor::Authenticating, type: :model do
     it_behaves_like 'polymorphic scope', model_attributes, :visitor_is,    :visitor,    [ Unidom::Visitor::User, Unidom::Visitor::Guest ]
     it_behaves_like 'polymorphic scope', model_attributes, :credential_is, :credential, [ Unidom::Visitor::Password                     ]
 
+    visitor  = Unidom::Visitor::User.create!     user_attributes
+    password = Unidom::Visitor::Password.create! password_attributes
+    it_behaves_like 'assert_present!', described_class, :authenticate!, [ visitor, { with: password, opened_at: Time.now } ], [ { 0 => :visitor }, :with, :opened_at ]
+
   end
 
 end
