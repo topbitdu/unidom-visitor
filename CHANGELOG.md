@@ -161,3 +161,7 @@
 ## v1.13.7
 1. Improve the Authenticating model for the argument validations of the .authenticate! method
 2. Improve the Authenticating spec for the argument validations of the .authenticate! method
+
+## v1.13.8
+1. Improve the As Credential concern for the argument validations of the #authenticate! method
+2. Improve the As Credential shared examples for the argument validations of the #authenticate! method
