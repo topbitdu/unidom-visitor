@@ -178,6 +178,13 @@ require 'unidom/visitor/validators_rspec'
 ```ruby
 # The Unidom::Visitor::Password model already include the Unidom::Visitor::Concerns::AsCredential concern
 
+# lib/unidom.rb
+Unidom::Contact::EmailAddress.class_eval do
+
+  include Unidom::Visitor::Concerns::AsIdentity
+
+end
+
 # app/models/your_credential.rb
 class YourCredential < ApplicationRecord
 
@@ -197,6 +204,21 @@ describe YourCredential, type: :model do
   }
 
   it_behaves_like 'Unidom::Visitor::Concerns::AsCredential', model_attribtues
+
+end
+
+# spec/models/unidom/contact/email_address_spec.rb
+describe Unidom::Contact::EmailAddress, type: :model do
+
+  context do
+
+    model_attribtues = {
+      full_address: "#{SecureRandom.hex 16}@#{SecureRandom.hex 8}.com"
+    }
+
+    it_behaves_like 'Unidom::Visitor::Concerns::AsIdentity', model_attribtues
+
+  end
 
 end
 ```

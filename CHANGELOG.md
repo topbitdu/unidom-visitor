@@ -165,3 +165,7 @@
 ## v1.13.8
 1. Improve the As Credential concern for the argument validations of the #authenticate! method
 2. Improve the As Credential shared examples for the argument validations of the #authenticate! method
+
+## v1.13.9
+1. As Identity shared examples
+2. Improve the RSpec shared examples manifest to require the As Identity shared examples
