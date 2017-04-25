@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unidom-visitor (1.13.8)
+    unidom-visitor (1.13.9)
       unidom-common (~> 1.9)
 
 GEM
@@ -48,8 +48,8 @@ GEM
     builder (3.2.3)
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
-    globalid (0.3.7)
-      activesupport (>= 4.1.0)
+    globalid (0.4.0)
+      activesupport (>= 4.2.0)
     i18n (0.8.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
