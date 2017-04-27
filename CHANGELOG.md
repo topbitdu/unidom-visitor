@@ -86,7 +86,7 @@
 
 ## v1.7
 1. Improved the As Visitor concern to add the #cognize! method
-2. Improve the As Party concern to add the #is_cognized! method
+2. Improved the As Party concern to add the #is_cognized! method
 
 ## v1.8
 1. Improve the As Visitor concern to add the .sign_up! method
