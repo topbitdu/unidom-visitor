@@ -93,7 +93,7 @@
 
 ## v1.9
 1. Improved the As Identity concern to add the #identificate? method
-2. Improve the As Visitor concern to add the #is_identificated? method
+2. Improved the As Visitor concern to add the #is_identificated? method
 
 ## v1.10
 1. Improve the As Credential concern to add the #authenticate? method
