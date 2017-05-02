@@ -97,7 +97,7 @@
 
 ## v1.10
 1. Improved the As Credential concern to add the #authenticate? method
-2. Improve the As Visitor concern to add the #is_authenticated? method
+2. Improved the As Visitor concern to add the #is_authenticated? method
 
 ## v1.11
 1. Improve the As Visitor concern to add the #cognize? method
