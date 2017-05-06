@@ -101,7 +101,7 @@
 
 ## v1.11
 1. Improved the As Visitor concern to add the #cognize? method
-2. Improve the As Party concern to add the #is_cognized? method
+2. Improved the As Party concern to add the #is_cognized? method
 
 ## v1.11.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
