@@ -12,8 +12,8 @@ class CreateUnidomAuthenticatings < ActiveRecord::Migration
       t.column :flag_code, 'char(4)', null: false, default: 'RQRD'
 
       t.column   :state, 'char(1)', null: false, default: 'C'
-      t.datetime :opened_at,        null: false, default: ::Time.utc(1970)
-      t.datetime :closed_at,        null: false, default: ::Time.utc(3000)
+      t.datetime :opened_at,        null: false, default: Unidom::Common::OPENED_AT
+      t.datetime :closed_at,        null: false, default: Unidom::Common::CLOSED_AT
       t.boolean  :defunct,          null: false, default: false
       t.jsonb    :notation,         null: false, default: {}
 
