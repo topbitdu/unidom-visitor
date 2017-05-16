@@ -169,3 +169,7 @@
 ## v1.13.9
 1. As Identity shared examples
 2. Improve the RSpec shared examples manifest to require the As Identity shared examples
+
+## v1.13.10
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
+2. Improve the Identificating migration, the Authenticating migration, the Recognization migration, the Guest migration, the User migration, & the Password migration for the #opened_at column, & the #closed_at column
