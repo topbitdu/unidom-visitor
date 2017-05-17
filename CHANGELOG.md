@@ -36,7 +36,7 @@
 1. Improved the Password model for validations on the #``clear_text`` attribute
 
 ## v0.7
-1. Improved the Authenticating model to add the ::authenticate! method
+1. Improved the Authenticating model to add the .``authenticate!`` method
 2. Improved the Authenticating model to deprecate the ::authenticate method
 3. Improved the Password model to call #generate_pepper_content before validation
 4. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
