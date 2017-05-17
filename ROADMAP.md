@@ -37,7 +37,7 @@
 
 ## v0.7
 1. Improve the Authenticating model to add the .``authenticate!`` method
-2. Improve the Authenticating model to deprecate the ::authenticate method
+2. Improve the Authenticating model to deprecate the .``authenticate`` method
 3. Improve the Password model to call #generate_pepper_content before validation
 4. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
