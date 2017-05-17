@@ -42,7 +42,7 @@
 4. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v0.8
-1. Improve the Identificating model to add the ::identificate! method
+1. Improve the Identificating model to add the .``identificate!`` method
 2. Improve the Identificating model to deprecate the ::identificate method
 
 ## v0.8.1
