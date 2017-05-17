@@ -33,7 +33,7 @@
 2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.7
 
 ## v0.6
-1. Improved the Password model for validations on the #clear_text attribute
+1. Improved the Password model for validations on the #``clear_text`` attribute
 
 ## v0.7
 1. Improve the Authenticating model to add the ::authenticate! method
