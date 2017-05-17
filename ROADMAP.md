@@ -29,7 +29,7 @@
 3. Improved the Identificating model to support the keyword arguments in the .``identificate`` method
 
 ## v0.5
-1. Improved the User model to support the keyword arguments for the password argument in the ::sign_up method
+1. Improved the User model to support the keyword arguments for the password argument in the .``sign_up`` method
 2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.7
 
 ## v0.6
